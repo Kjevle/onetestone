@@ -1,12 +1,14 @@
 package com.omogom.onetestone
 
-import com.badlogic.gdx.Game
+import ktx.app.KtxGame
+import ktx.app.KtxScreen
 
 /** [com.badlogic.gdx.ApplicationListener] implementation shared by all platforms. */
 //class Main : ApplicationAdapter()
 
-class Main : Game(){
+class Main : KtxGame<KtxScreen>(){
     override fun create() {
-        setScreen(FirstScreen())
+        addScreen(FirstScreen())
+        setScreen<FirstScreen>()
     }
 }
